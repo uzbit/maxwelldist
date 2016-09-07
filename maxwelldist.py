@@ -15,6 +15,7 @@ MAX_SPEED = 10000 # Velocity is a vector, speed (m/s) is magnitude of that vecto
 ATOMS_PER_BIN = 100
 
 def MaxwellSpeedDist(s, m, T):
+    # See wikipedia: https://en.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann_distribution
     s2 = s*s
     twokT = 2 * BOLTZMANN_K * T
     coeff = 4 * np.pi * (m / (np.pi * twokT)) ** (3./2.)
